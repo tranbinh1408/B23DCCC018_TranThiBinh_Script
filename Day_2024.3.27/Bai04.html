@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính tổng các số dương từ 1 đến n đến khi tổng >=100</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <script>
+        var tong = 0;
+        var n = parseInt(prompt("Nhập số nguyên n:"));
+        
+        for(var i = 1; i <= n; i++) {
+            tong += i;
+            if (tong >= 100) {
+                break; 
+            }
+        }
+        
+        document.write("Tổng = ", tong);
+    </script>
+</body>
+</html>
