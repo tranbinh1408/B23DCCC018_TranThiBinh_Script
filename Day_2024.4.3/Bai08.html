@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mảng</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        var array=[1,2,3,4,5,6,7,8,9];
+        alert(array.length);
+
+        var array= new Array(1,2,3,4,5,6,7,8,9);
+        document.write("Hàm join():",array.join('-'),"<br>");
+
+        var array_1=new Array(1,2,3,4,5,6);
+        var array_2=new Array(7,8,9);
+        document.write("Hàm concat():", array_1.concat(array_2), "<br>");
+        
+        var array= new Array(1,2,3,4,5,6,7,8,9);
+        document.write("Hàm slice():",array.slice(2,8),"<br>");
+
+        var array= new Array(1,2,3,4,5,6,7,8,9);
+        document.write("Hàm reverse():",array.reverse(),"<br>");
+
+        var array= new Array(5,6,3,2,1);
+        document.write("Hàm sort():",array.sort(),"<br>");
+
+        var array= new Array(1,2,3,4,5,6,7);
+        array.push(8,9,10);
+        document.write("Hàm push():",array, "<br>");       
+        
+        var array= new Array(1,2,3,4,5,6,7,8,9);
+        array.pop();
+        document.write("Hàm pop():",array, "<br>"); 
+
+        var array= new Array(3,4,5,6,7,8,9);
+        array.unshift(1,2);
+        document.write("Hàm unshift():",array, "<br>");        
+
+        var array= new Array(1,2,3,4,5,6,7,8,9);
+        array.shift();
+        document.write("Hàm shift():",array);                
+    </script>
+</body>        

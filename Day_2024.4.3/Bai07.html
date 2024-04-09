@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viết hàm n!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script>
+    function tinhGiaiThua(n) {
+      function giaiThua(n) {
+        if (n === 0 || n === 1) {
+          return 1;
+        } else {
+          return n * giaiThua(n - 1);
+        }
+      }
+    
+      if (n < 0) {
+        return "Không tính được giai thừa của số âm";
+      } else {
+        return giaiThua(n);
+      }
+    }
+
+    var n = 10; 
+    var ketQua = tinhGiaiThua(n);
+    document.write("Giai thừa của ", n, " là: ", ketQua);
+  </script>
+</body>
+</html>
+
