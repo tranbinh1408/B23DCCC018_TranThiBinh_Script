@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai02</title>
+</head>
+<body>
+    <script>
+    function timmax(mang){
+        if(mang.length===0){
+            return null;
+        }
+        var max= mang[0];
+        for(var i=1; i< mang.length; i++){
+            if (mang[i]>max){
+                max=mang[i];
+            }
+
+        }
+        return max;
+
+    }
+    function sochinhphuong(so){
+        if(so<0){
+            return false;
+        }
+        var canBacHai = Math.sqrt(so);
+        return canBacHai === Math.floor(canBacHai);
+    }
+    function trungbinhCong(mang){
+        var tong = mang.reduce(function(a, b) { return a + b; }, 0);
+        var tbc = tong / mang.length;
+        var soLonHonTrungBinh = [];
+        for (var i = 0; i < mang.length; i++) {
+            if (mang[i] > tbc) {
+                soLonHonTrungBinh.push(mang[i]);
+            }
+        }
+        return soLonHonTrungBinh;
+    }
+    function trungBinhCongKhongAm(mang) {
+    var tong = 0;
+    var soLuongKhongAm = 0;
+
+    for (var i = 0; i < mang.length; i++) {
+        if (mang[i] >= 0) {
+            tong += mang[i];
+            soLuongKhongAm++;
+        }
+    }
+
+    if (soLuongKhongAm === 0) {
+        return 0; // Trường hợp mảng không có số không âm, trả về 0 để tránh chia cho 0
+    }
+
+    return tong / soLuongKhongAm;
+}
+
+
+
+var array=[1,33,5,-2,-3,8,5,4,3,6];
+var max= timmax(array);
+document.write("Số nguyên lớn nhất trong mảng là:", max, "<br>");
+document.write('Các số chính phương trong mảng là: ');
+    for (var i = 0; i < array.length; i++) {
+        if (sochinhphuong(array[i])) {
+            document.write(array[i] + " " );
+        }
+    }
+var soLonHonTrungBinh=trungbinhCong(array);
+document.write("<br>Các số lớn hơn trung bình của mảng là:", soLonHonTrungBinh);
+var trungBinhCong = trungBinhCongKhongAm(array);
+document.write("<br>Trung bình cộng của các số không âm trong mảng là:", trungBinhCong);
+
+    </script>
+</body>
+</html>
