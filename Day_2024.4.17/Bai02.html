@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <script>
+        // Tạo đối tượng trong JS bằng object literal
+        student= {id:"B23DCCC018",name:"TTB", salary:40000000}
+        document.write(student.id+' '+student.name+" "+student.salary+ "<br>");
+        // Tạo đối tượng bằng new Object
+        var student=new Object();
+        student.id="B23DCCC018";
+        student.name="TTB";
+        student.salary=40000000;
+        document.write(student.id+ ' '+student.name+" "+student.salary + "<br>");
+        // Tạo đối tượng bằng hàm khởi tạo constructor của Object
+        function Student(id,name,salary){
+        this.id= id;
+        this.name= name;
+        this.salary= salary;         
+        }
+        var student= new Student("B23DCCC018","TTB",40000000);  
+        document.write(student.id+" "+student.name+" "+student.salary); 
+        // Tạo đối tượng bằng cách tạo ra 1 lớp và định nghĩa phương thức
+        class Person{
+            name;
+            age;
+            salary;
+            hello(){
+                document.write("Hello"+ this.name);
+            }
+            changeSalary(newSalary){
+                this.Salary = newSalary;
+            }
+        }
+        a= new Person();
+        a.name = "TTB"
+        a.hello();
+        a.salary=40000000
+        document.write("<br>"+ a.name +": " + a.salary);
+        a.changeSalary(12);
+        document.write("<br>"+ a.name + ": "+ a.salary);
+    </script>
+
+</body>
+</html>
