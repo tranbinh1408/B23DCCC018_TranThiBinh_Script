@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trình chiếu ảnh</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-nen-phong-canh-3d-001.jpg" style="width:100%">
+  <img class="mySlides" src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/08/hinh-nen-thien-nhien-1.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/originals/91/cb/54/91cb545176720cc851687a7263984600.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+setInterval(function() {
+  plusDivs(1);
+}, 5000);
+</script>
+
+</body>
+</html>
