@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <script type="text/babel">
+      var x = 10;
+      function myFnc() {
+        console.log(x); /* output: 10, x có ảnh hưởng tới Function */
+      }
+      console.log(x); /* output: 10, x có ảnh hưởng khắp nơi */
+      myFnc();
+    </script>
+  </body>
+</html>
